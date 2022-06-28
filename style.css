@@ -1,0 +1,117 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.gridbox {
+    display: grid;
+    grid-template-columns: 15% 75% 10%;
+
+}
+/************header styles*************/
+header {
+    background-color: aqua;
+    border: 1px solid rgb(128, 0, 28);
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5%;
+}
+
+img.hair {
+    border-radius: 50%;
+}
+
+.buttonbox {
+    display: grid;
+    grid-template-columns: 15% 15% 15%;
+    grid-template-rows: 15% 15% 15%;
+    gap: 5%;
+}
+
+input.button {
+    
+}
+
+/***********main body styles *********/
+main {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+}
+
+article.projects {
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+article.trending>div>img {
+    border-radius: 50%;
+}
+
+article.projects>div.probox {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5%;
+}
+
+.pro {
+    border: 1px solid gray;
+    display: grid;
+    padding: 0 5%;
+}
+
+article.announcements>div {
+    border-bottom: 2px solid black;
+}
+
+article.trending {
+    display: grid;
+    gap: 5%;
+}
+
+article.trending>div {
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    gap: 5%;
+}
+
+/**********sidebar nav style*********/
+nav {
+    background-color: lightgreen;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-rows: 10% auto auto;
+    gap: 2%;
+    padding: 5%;
+    font-size: 1.2rem;
+}
+
+.dash {
+    font-size: x-large;
+}
+
+.nav1 {
+    display: grid;
+    padding: 5%;
+    align-content: space-around;
+    gap: 5%;
+    grid-template-columns: repeat(2,min-content);
+}
+
+.nav2 {
+    display: grid;
+    padding: 5%;
+    grid-template-columns: repeat(2,min-content);
+    gap: 5%;
+    align-content: space-around;
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
