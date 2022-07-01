@@ -4,28 +4,6 @@ html, body {
     box-sizing: border-box;
 }
 
-@media only screen and (max-width: 800px) {
-    html {
-      font-size: 10px;
-      height: calc(var(--vh, 1vh) * 100)
-    }
-  }
-
-  @media only screen and (max-width: 550px) {
-    html {
-      font-size: 8px;
-      height: calc(var(--vh, 1vh) * 100)
-    }
-  }
-
-  @media only screen and (max-width: 450px) {
-    html {
-      font-size: 7px;
-      height: calc(var(--vh, 1vh) * 100)
-    }
-
-  }
-
 .gridbox {
     display: grid;
     grid-template-columns: 15% 75% 10%;
@@ -41,7 +19,6 @@ header {
     grid-row-end: 2;
     display: grid;
     grid-template-columns: auto auto;
-    gap: 5%;
 }
 
 img.hair {
@@ -52,26 +29,52 @@ img.hair {
     display: grid;
     grid-template-columns: 15% 15% 15%;
     grid-template-rows: 15% 15% 15%;
-    gap: 5%;
 }
-
+/*search bar styles*/
 .searchbox {
-    display: inline;
-    padding: 5%;
+    padding: 3rem
 }
 
 .magni {
-    width: 15%;
+    min-width: 3rem;
+    
 }
 
 .search {
     width: 70%;
     border-radius: 30px;
-    padding: 5%;
+    padding: .3rem;
+    font-size: 1rem;
 }
 
-input.button {
-    
+/*main hi there box*/
+
+.profilemain {
+    display: flex;
+    padding: 3rem;
+}
+
+/*mini profile alert section*/
+
+.profilebell {
+    padding: 3rem;
+    display: flex;
+    margin-left: 4rem;
+}
+
+/*3buttons*/
+
+.buttonbox {
+    padding: 3rem;
+    gap: 3rem;
+}
+
+.buttonbox > * {
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+    border: 0;
+    border-radius: 12px;
 }
 
 /***********main body styles *********/
@@ -84,6 +87,7 @@ main {
 article.projects {
     display: grid;
     grid-template-rows: 10% 90%;
+    padding: 2rem;
 }
 
 article.trending>div>img {
@@ -117,6 +121,10 @@ article.trending>div {
     gap: 5%;
 }
 
+.icons {
+    justify-self: flex-end;
+}
+
 /**********sidebar nav style*********/
 nav {
     background-color: lightgreen;
@@ -125,30 +133,42 @@ nav {
     grid-row-start: 1;
     grid-row-end: 4;
     display: grid;
-    grid-template-rows: 10% auto auto;
+    grid-template-rows: 15% auto auto;
     gap: 2%;
     padding: 5%;
     font-size: 1.2rem;
 }
 
-.dash {
-    font-size: x-large;
+nav > :first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+}
+
+.dash2 {
+    min-width: 3rem;
+}
+
+.dash3 {
+    margin-left: .7rem;
+    font-size: 1.6rem;
+    align-self: flex-end;
+    font-weight: 700;
+}
+
+li {
+    display: flex;
+    max-width: 90%;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 400;
 }
 
 .nav1 {
-    display: grid;
-    padding: 5%;
-    align-content: space-around;
-    gap: 5%;
-    grid-template-columns: repeat(2,min-content);
-}
-
-.nav2 {
-    display: grid;
-    padding: 5%;
-    grid-template-columns: repeat(2,min-content);
-    gap: 5%;
-    align-content: space-around;
-    margin-top: 20%;
-    margin-bottom: 10%;
+    margin-top: 6rem;
 }
