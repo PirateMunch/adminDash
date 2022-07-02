@@ -1,24 +1,47 @@
+/* font and colors*/
+
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Roboto&display=swap');
+
+:root {
+    --color-orange: #fc4445;
+    --color-blue-light: #3feee6;
+    --color-blue-dull: #55bcc9;
+    --color-blue-dull2: #97caef;
+    --color-blue-light2: #cafafe;
+    --font-fancy500: 'Arima', cursive;
+    --font-robo: 'Roboto', sans-serif;
+}
+
+
 html, body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: var(--color-blue-light2);
+    font-family: var(--font-robo);
 }
 
 .gridbox {
     display: grid;
-    grid-template-columns: 15% 75% 10%;
+    grid-template-columns: 15%;
+    grid-template-rows: 30%;
 
 }
+
+h2, h3, h4 {
+    font-family: var(--font-fancy500);
+}
+
 /************header styles*************/
 header {
-    background-color: aqua;
-    border: 1px solid rgb(128, 0, 28);
+    background-color: var(--color-blue-dull2);
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
     display: grid;
     grid-template-columns: auto auto;
+    font-family: var(--font-fancy500);
 }
 
 img.hair {
@@ -32,66 +55,86 @@ img.hair {
 }
 /*search bar styles*/
 .searchbox {
-    padding: 3rem
+    display: flex;
+    padding: .3rem;
+    align-self: center;
+    margin-left: 3rem;
 }
 
 .magni {
-    min-width: 3rem;
+    min-width: 2rem;
     
 }
 
 .search {
-    width: 70%;
+    width: 35rem;
     border-radius: 30px;
-    padding: .3rem;
     font-size: 1rem;
+    margin-left: 1rem;
 }
 
 /*main hi there box*/
 
 .profilemain {
     display: flex;
-    padding: 3rem;
+    gap: 2rem;
+    margin-left: 3rem;
+    font-size: 1.3rem;
+    line-height: .7;
+    margin-bottom: 4rem;
 }
 
 /*mini profile alert section*/
 
 .profilebell {
-    padding: 3rem;
     display: flex;
-    margin-left: 4rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
+.profilebell > * {
+    display: flex;
+    align-items: center;
+}
+
+.hair2 {
+    margin: 1rem 2rem;
+}
 /*3buttons*/
 
 .buttonbox {
-    padding: 3rem;
-    gap: 3rem;
+    justify-content: space-evenly;
+    align-content: center;
 }
 
 .buttonbox > * {
-    background-color: blue;
+    background-color: var(--color-orange);
     color: white;
     font-weight: 600;
     border: 0;
-    border-radius: 12px;
+    border-radius: 20px;
+    padding: .7rem 2rem;
+    align-self: center;
+    justify-self: center;
 }
 
 /***********main body styles *********/
 main {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: auto auto;
     grid-template-rows: auto;
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
-
+/* project boxes*/
 article.projects {
     display: grid;
     grid-template-rows: 10% 90%;
     padding: 2rem;
 }
 
-article.trending>div>img {
-    border-radius: 50%;
+.icons {
+    justify-self: flex-end;
 }
 
 article.projects>div.probox {
@@ -101,13 +144,31 @@ article.projects>div.probox {
 }
 
 .pro {
-    border: 1px solid gray;
+    border: 1px solid var(--color-orange);
     display: grid;
     padding: 0 5%;
+    background-color: white;
+    border-radius: 12px;
+}
+/*aside section*/
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    margin: 0 4rem;
 }
 
-article.announcements>div {
-    border-bottom: 2px solid black;
+.announce {
+    border: 1px solid var(--color-orange);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    background-color: white;
+}
+
+.announce> span {
+    border-bottom: 1px solid black;
+    line-height: .5;
 }
 
 article.trending {
@@ -116,18 +177,34 @@ article.trending {
 }
 
 article.trending>div {
-    display: grid;
-    grid-template-columns: repeat(2,max-content);
+   /* display: grid;
+    grid-template-columns: repeat(2,max-content);*/
     gap: 5%;
+    border: 1px solid var(--color-orange);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
 }
 
-.icons {
-    justify-self: flex-end;
+.tend {
+    display: flex;
+    margin-bottom: .5rem;
+}
+
+article.trending>.trendbox>div>img {
+    border-radius: 50%;
+    margin-right: .7rem;
+}
+
+.trendname {
+    align-self: flex-end;
 }
 
 /**********sidebar nav style*********/
 nav {
-    background-color: lightgreen;
+    background-color: var(--color-orange);
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -137,6 +214,7 @@ nav {
     gap: 2%;
     padding: 5%;
     font-size: 1.2rem;
+    color: var(--color-blue-light2);
 }
 
 nav > :first-child {
